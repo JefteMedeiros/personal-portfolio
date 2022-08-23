@@ -1,8 +1,9 @@
 import type { NextPage } from 'next'
+import { Headline } from '../components/Headline';
 
 const Home: NextPage = () => {
   return (
-    <h1>Initial Commit</h1>
+    <Headline />
   );
 }
 
