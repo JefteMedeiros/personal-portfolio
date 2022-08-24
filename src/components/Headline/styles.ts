@@ -1,20 +1,7 @@
 import styled from "styled-components";
 
-export const HeadlineContainer = styled.div`
+export const Container = styled.section`
   position: relative;
-`;
-
-export const ImageContainer = styled.div`
-  position: absolute;
-  z-index: -1;
-  right: 11.25rem;
-  top: calc(100vh - (100vh - 6rem));
-  width: 54.375rem;
-  height: calc(100vh - 6rem);
-
-  img {
-    object-fit: cover;
-  }
 `;
 
 export const PurpleRectangle = styled.div`
@@ -28,4 +15,12 @@ export const PurpleRectangle = styled.div`
 
   opacity: 0.5;
   background-color: ${(props) => props.theme["purple"]};
+
+  @media screen and (max-width: 1600px) {
+    min-width: 32.75rem;
+  }
+
+  @media screen and (max-width: 960px) {
+    display: none;
+  }
 `;

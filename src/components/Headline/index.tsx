@@ -1,17 +1,15 @@
-import Image from "next/image";
-import { About } from "./About";
+import { Introduction } from "./Introduction";
 import { Header } from "./Header";
-import { HeadlineContainer, ImageContainer, PurpleRectangle } from "./styles";
+import { Container, PurpleRectangle } from "./styles";
+import { ProfileImage } from "./ProfileImage";
 
 export function Headline() {
   return (
-    <HeadlineContainer>
-      <ImageContainer>
-        <Image src="/Me.jpg" layout="fill" />
-      </ImageContainer>
+    <Container>
       <Header />
-      <About />
+      <ProfileImage />
+      <Introduction />
       <PurpleRectangle />
-    </HeadlineContainer>
+    </Container>
   );
 }

@@ -6,20 +6,21 @@ import {
   ButtonContainer,
   ViewWorkButton,
   HireMeButton,
+  IntroContainer,
 } from "./styles";
 
 import { SocialMedia } from "./SocialMedia";
 
-export function About() {
+export function Introduction() {
   return (
     <Container>
-      <div>
+      <IntroContainer>
         <Intro>Hello, I'm Jeff, a</Intro>
         <Role>Frontend Engineer.</Role>
         <Bio>
-          Product Designer, UI/UX Designer, and developer based in Brazil. Over
-          the past 17 years, as an art director and designer, I’ve worked with
-          big companies and up-and-coming startups.
+          Jr. Frontend Engineer and web developer based in Brazil. Over
+          the past 2 years, as a solo developer, I’ve worked on multiple
+          portfolio and freelancing projects.
         </Bio>
         <ButtonContainer>
           <HireMeButton>
@@ -29,7 +30,7 @@ export function About() {
             <a href="#">VIEW WORK</a>
           </ViewWorkButton>
         </ButtonContainer>
-      </div>
+      </IntroContainer>
       <SocialMedia />
     </Container>
   );

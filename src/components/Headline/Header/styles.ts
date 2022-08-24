@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+export const Container = styled.header``;
+
 export const HeaderNav = styled.ul`
   display: flex;
   justify-content: flex-end;
@@ -14,6 +16,18 @@ export const HeaderNav = styled.ul`
     &:hover {
       transform: scale(1.05);
     }
+  }
+
+  @media screen and (max-width: 1600px) {
+    margin-right: 4.375rem;
+  }
+
+  @media screen and (max-width: 520px) {
+    margin: 0;
+    justify-content: center;
+    padding: 0.8625rem 0;
+    gap: 1.25rem;
+    background-color:  ${props => props.theme["purple"]};
   }
 `;
 

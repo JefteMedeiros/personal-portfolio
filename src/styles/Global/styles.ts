@@ -21,6 +21,9 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   body {
+    display: flex;
+    flex-direction: column;
+
     font-family: "Inter", sans-serif;
     background-color: ${(props) => props.theme["black"]};
     color: ${(props) => props.theme["white"]};
@@ -65,6 +68,27 @@ export const SectionTitle = styled.h1`
   color: ${(props) => props.theme["white"]};
 `;
 
+export const SectionTitleUnderline = styled(SectionTitle)`
+  position: relative;
+  text-align: center;
+  font-size: 2.5rem;
+  line-height: 3rem;
+
+  &::after {
+    position: absolute;
+    bottom: -1rem;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    content: "";
+    height: 0.1875rem;
+    border-radius: 9999px;
+    width: 5rem;
+    background-color: ${(props) => props.theme["pink"]};
+  }
+`;
+
 export const SectionDescription = styled.p`
   position: relative;
   font-size: 1.25rem;
@@ -72,4 +96,61 @@ export const SectionDescription = styled.p`
   max-width: 42.0625rem;
   line-height: 2rem;
   color: ${(props) => props.theme["white"]};
+`;
+
+export const ServiceCard = styled.div`
+  padding: 2rem;
+
+  background-color: #dfe3eb;
+  border-radius: 6px;
+  width: 100%;
+  transition: all 200ms;
+
+  &:hover {
+    background-color: ${(props) => props.theme["white"]};
+  }
+`;
+
+export const ServiceCardIcon = styled.div`
+  margin-bottom: 100px;
+
+  svg {
+    color: black;
+  }
+`;
+
+export const ServiceCardRole = styled(SectionTitle)`
+  position: relative;
+  font-size: 2rem;
+  color: ${(props) => props.theme["black"]};
+  font-weight: 400;
+  line-height: 2.5rem;
+  margin-bottom: 40px;
+
+  &::after {
+    position: absolute;
+    bottom: -1rem;
+    opacity: 0.5;
+    left: 0;
+    content: "";
+    background-color: ${(props) => props.theme["pink"]};
+    border-radius: 9999px;
+    width: 4rem;
+    height: 0.1875rem;
+  }
+`;
+
+export const DiscussNowButton = styled(Button)`
+  display: flex;
+  padding: 0;
+  line-height: normal;
+  background: transparent;
+
+  &:hover {
+    background: transparent;
+
+    svg {
+      color: ${(props) => props.theme["pink"]};
+    }
+  }
 `;
