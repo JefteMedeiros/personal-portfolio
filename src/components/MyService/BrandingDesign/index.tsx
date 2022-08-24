@@ -1,9 +1,9 @@
 import { ArrowIcon } from "../../../styles/Global/ArrowIcon";
 import {
-  DiscussNowButton,
+  CardTitle,
+  HoverButton,
   ServiceCard,
   ServiceCardIcon,
-  ServiceCardRole,
 } from "../../../styles/Global/styles";
 
 export function BrandingDesign() {
@@ -26,12 +26,12 @@ export function BrandingDesign() {
           />
         </svg>
       </ServiceCardIcon>
-      <ServiceCardRole>
+      <CardTitle>
         Branding <br /> Design
-      </ServiceCardRole>
-      <DiscussNowButton>
+      </CardTitle>
+      <HoverButton>
         <ArrowIcon />
-      </DiscussNowButton>
+      </HoverButton>
     </ServiceCard>
   );
 }

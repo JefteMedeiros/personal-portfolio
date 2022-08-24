@@ -1,7 +1,6 @@
 import {
   Container,
   Intro,
-  Role,
   Bio,
   ButtonContainer,
   ViewWorkButton,
@@ -10,17 +9,18 @@ import {
 } from "./styles";
 
 import { SocialMedia } from "./SocialMedia";
+import { PurpleUnderlinedTitle } from "../../../styles/Global/styles";
 
 export function Introduction() {
   return (
     <Container>
       <IntroContainer>
         <Intro>Hello, I'm Jeff, a</Intro>
-        <Role>Frontend Engineer.</Role>
+        <PurpleUnderlinedTitle>Frontend Engineer.</PurpleUnderlinedTitle>
         <Bio>
-          Jr. Frontend Engineer and web developer based in Brazil. Over
-          the past 2 years, as a solo developer, I’ve worked on multiple
-          portfolio and freelancing projects.
+          Jr. Frontend Engineer and web developer based in Brazil. Over the past
+          2 years, as a solo developer, I’ve worked on multiple portfolio and
+          freelancing projects.
         </Bio>
         <ButtonContainer>
           <HireMeButton>

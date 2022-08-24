@@ -1,11 +1,12 @@
 import styled from "styled-components";
-import { Button, SectionTitle } from "../../styles/Global/styles";
 
 export const Container = styled.div`
+  margin-top: 4.25rem;
+  margin-bottom: 5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 3.125rem;
+  gap: 3.25rem;
 `;
 
 export const CardsContainer = styled.section`

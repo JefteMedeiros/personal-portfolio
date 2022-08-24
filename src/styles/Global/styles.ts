@@ -98,7 +98,7 @@ export const SectionDescription = styled.p`
   color: ${(props) => props.theme["white"]};
 `;
 
-export const ServiceCard = styled.div`
+export const CardBox = styled.div`
   padding: 2rem;
 
   background-color: #dfe3eb;
@@ -111,6 +111,24 @@ export const ServiceCard = styled.div`
   }
 `;
 
+export const ServiceCard = styled(CardBox)`
+`;
+
+export const HoverButton = styled(Button)`
+  display: flex;
+  padding: 0;
+  line-height: normal;
+  background: transparent;
+
+  &:hover {
+    background: transparent;
+
+    svg {
+      color: ${(props) => props.theme["pink"]};
+    }
+  }
+`;
+
 export const ServiceCardIcon = styled.div`
   margin-bottom: 100px;
 
@@ -119,13 +137,13 @@ export const ServiceCardIcon = styled.div`
   }
 `;
 
-export const ServiceCardRole = styled(SectionTitle)`
+export const CardTitle = styled(SectionTitle)`
   position: relative;
   font-size: 2rem;
   color: ${(props) => props.theme["black"]};
   font-weight: 400;
   line-height: 2.5rem;
-  margin-bottom: 40px;
+  margin-bottom: 2.5rem;
 
   &::after {
     position: absolute;
@@ -140,17 +158,39 @@ export const ServiceCardRole = styled(SectionTitle)`
   }
 `;
 
-export const DiscussNowButton = styled(Button)`
-  display: flex;
-  padding: 0;
-  line-height: normal;
-  background: transparent;
+export const PinkTitle = styled.span`
+  font-size: 3.5rem;
+  line-height: 4rem;
+  font-weight: 400;
+  color: ${(props) => props.theme["pink"]};
+`;
 
-  &:hover {
-    background: transparent;
+export const PurpleUnderlinedTitle = styled.span`
+  position: relative;
+  font-size: 5rem;
+  font-weight: 400;
+  color: ${(props) => props.theme["purple"]};
 
-    svg {
-      color: ${(props) => props.theme["pink"]};
+  &::after {
+    position: absolute;
+    opacity: 0.2;
+    content: "";
+    width: 37.125rem;
+    height: 2.25rem;
+    bottom: 0;
+    left: 0.9375rem;
+    background-color: ${(props) => props.theme["purple"]};
+
+    @media screen and (max-width: 960px) {
+      max-width: 17rem;
     }
+  }
+
+  @media screen and (max-width: 960px) {
+    font-size: 2.125rem;
+  }
+
+  @media screen and (max-width: 420px) {
+    font-size: 1.875rem;
   }
 `;

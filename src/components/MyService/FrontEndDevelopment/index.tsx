@@ -1,9 +1,9 @@
 import { ArrowIcon } from "../../../styles/Global/ArrowIcon";
 import {
-  DiscussNowButton,
+  CardTitle,
+  HoverButton,
   ServiceCard,
   ServiceCardIcon,
-  ServiceCardRole,
 } from "../../../styles/Global/styles";
 
 export function FrontEndDevelopment() {
@@ -33,12 +33,12 @@ export function FrontEndDevelopment() {
           />
         </svg>
       </ServiceCardIcon>
-      <ServiceCardRole>
+      <CardTitle>
         Front end <br /> Development
-      </ServiceCardRole>
-      <DiscussNowButton>
+      </CardTitle>
+      <HoverButton>
         <ArrowIcon />
-      </DiscussNowButton>
+      </HoverButton>
     </ServiceCard>
   );
 }

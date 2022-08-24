@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { PinkTitle } from "../../styles/Global/styles";
 import {
   AboutContainer,
   Container,
@@ -7,7 +8,6 @@ import {
   ExperienceContainer,
   ExperienceDescription,
   ImageContainer,
-  PinkTitle,
   SayHiButton,
 } from "./styles";
 

@@ -69,13 +69,6 @@ export const ExperienceDescription = styled.span`
   font-weight: 400;
 `;
 
-export const PinkTitle = styled.span`
-  font-size: 3.5rem;
-  line-height: 4rem;
-  font-weight: 400;
-  color: ${(props) => props.theme["pink"]};
-`;
-
 export const SayHiButton = styled(Button)`
   margin-top: 2rem;
   align-self: flex-start;
