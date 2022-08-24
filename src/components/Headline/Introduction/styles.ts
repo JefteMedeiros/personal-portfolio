@@ -40,35 +40,7 @@ export const Intro = styled(SectionTitle)`
   }
 `;
 
-export const Role = styled.h2`
-  position: relative;
-  font-size: 5rem;
-  font-weight: 400;
-  color: ${(props) => props.theme["purple"]};
 
-  &::after {
-    position: absolute;
-    opacity: 0.2;
-    content: "";
-    width: 37.125rem;
-    height: 2.25rem;
-    bottom: 0;
-    left: 0.9375rem;
-    background-color: ${(props) => props.theme["purple"]};
-
-    @media screen and (max-width: 960px) {
-      max-width: 17rem;
-    }
-  }
-
-  @media screen and (max-width: 960px) {
-    font-size: 2.125rem;
-  }
-
-  @media screen and (max-width: 420px) {
-    font-size: 1.875rem;
-  }
-`;
 
 export const Bio = styled(SectionDescription)`
   &:after {
