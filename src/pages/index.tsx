@@ -5,6 +5,7 @@ import { Headline } from '../components/Headline';
 import { HireMe } from '../components/HireMe';
 import { MySelectedWork } from '../components/MySelectedWork';
 import { MyService } from '../components/MyService';
+import { Testimonials } from '../components/Testimonials';
 
 const Home: NextPage = () => {
   return (
@@ -15,6 +16,7 @@ const Home: NextPage = () => {
       <MySelectedWork />
       <Companies />
       <HireMe />
+      <Testimonials />
     </>
   );
 }
