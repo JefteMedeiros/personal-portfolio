@@ -31,7 +31,7 @@ export const GlobalStyles = createGlobalStyle`
 `;
 
 export const Button = styled.button`
-  line-height: 3.5rem;
+  line-height: 3.25rem;
   padding: 0 1.875rem;
   font-size: 1rem;
   border: 2px solid transparent;
@@ -47,6 +47,7 @@ export const Button = styled.button`
   &:hover {
     cursor: pointer;
     background-color: ${(props) => props.theme["purple"]};
+    color: ${(props) => props.theme["white"]};
 
     svg {
       color: ${(props) => props.theme["white"]};
@@ -111,37 +112,10 @@ export const CardBox = styled.div`
   }
 `;
 
-export const ServiceCard = styled(CardBox)`
-`;
-
-export const HoverButton = styled(Button)`
-  display: flex;
-  padding: 0;
-  line-height: normal;
-  background: transparent;
-
-  &:hover {
-    background: transparent;
-
-    svg {
-      color: ${(props) => props.theme["pink"]};
-    }
-  }
-`;
-
-export const ServiceCardIcon = styled.div`
-  margin-bottom: 100px;
-
-  svg {
-    color: black;
-  }
-`;
-
 export const CardTitle = styled(SectionTitle)`
   position: relative;
   font-size: 2rem;
   color: ${(props) => props.theme["black"]};
-  font-weight: 400;
   line-height: 2.5rem;
   margin-bottom: 2.5rem;
 
@@ -155,6 +129,21 @@ export const CardTitle = styled(SectionTitle)`
     border-radius: 9999px;
     width: 4rem;
     height: 0.1875rem;
+  }
+`;
+
+export const HoverButton = styled(Button)`
+  display: flex;
+  padding: 0;
+  line-height: normal;
+  background: transparent;
+
+  &:hover {
+    background: transparent;
+  }
+
+  svg {
+    color: ${(props) => props.theme["pink"]};
   }
 `;
 

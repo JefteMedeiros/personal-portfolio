@@ -1,23 +1,17 @@
 import { Star } from "phosphor-react";
-import {
-  SectionTitle,
-  SectionTitleUnderline,
-} from "../../styles/Global/styles";
+import { userTestimonials } from "../../data/userTestimonials";
+import { SectionTitleUnderline } from "../../styles/Global/styles";
+
 import {
   Container,
   QuoteIcon,
   TestimonialBox,
   TestimonialContainer,
-  UserBox,
   UserComment,
-  UserCompany,
   UserContainer,
-  UserInfo,
-  UserName,
-  UserPic,
   UserRating,
-  UserRole,
 } from "./styles";
+import { UserBox } from "./UserBox";
 
 export function Testimonials() {
   return (
@@ -25,50 +19,11 @@ export function Testimonials() {
       <SectionTitleUnderline>Testimonial</SectionTitleUnderline>
       <TestimonialContainer>
         <UserContainer>
-          <UserBox>
-            <UserPic>
-              <div />
-            </UserPic>
-            <UserInfo>
-              <UserName>Sundar Pichai</UserName>
-              <UserRole>
-                CEO and Founder of <UserCompany> Google</UserCompany>
-              </UserRole>
-            </UserInfo>
-          </UserBox>
-          <UserBox>
-            <UserPic>
-              <div />
-            </UserPic>
-            <UserInfo>
-              <UserName>Sundar Pichai</UserName>
-              <UserRole>
-                CEO and Founder of <UserCompany> Google</UserCompany>
-              </UserRole>
-            </UserInfo>
-          </UserBox>
-          <UserBox>
-            <UserPic>
-              <div />
-            </UserPic>
-            <UserInfo>
-              <UserName>Sundar Pichai</UserName>
-              <UserRole>
-                CEO and Founder of <UserCompany> Google</UserCompany>
-              </UserRole>
-            </UserInfo>
-          </UserBox>
-          <UserBox>
-            <UserPic>
-              <div />
-            </UserPic>
-            <UserInfo>
-              <UserName>Sundar Pichai</UserName>
-              <UserRole>
-                CEO and Founder of <UserCompany> Google</UserCompany>
-              </UserRole>
-            </UserInfo>
-          </UserBox>
+          {userTestimonials.map((user, key) => {
+            return (
+              <UserBox key={key} name={user.name} pic={user.pic} role={user.role} company={user.company} />
+            )
+          })}
         </UserContainer>
         <TestimonialBox>
           <UserRating>

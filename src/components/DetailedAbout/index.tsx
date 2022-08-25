@@ -15,32 +15,30 @@ export function DetailedAbout() {
   return (
     <Container>
       <ImageContainer>
-        <Image layout="fill" src="/Me.jpg" />
+        <Image layout="fill" src="/images/backgrounds/Setup.jpg" />
       </ImageContainer>
       <AboutContainer>
         <DetailedAboutTitle>
           A dedicated Web Developer who is passionate about what it does.
         </DetailedAboutTitle>
         <DetailedAboutDescription>
-          Morbi quam velit, euismod in imperdiet vitae, elementum et elit. Nunc
-          finibus, felis sit amet sollicitudin sollicitudin, nisi magna feugiat
-          enim, in maximus urna enim ac tortor. Nunc in volutpat ipsum, molestie
-          commodo odio. Quisque auctor nisi mi. Aenean venenatis sapien et
-          interdum interdum.
+         I have been studying web development for about a year. Since my first
+         plain html website, i've figured out that this is what i love to do. I love
+         learning new stuff and helping others to grow. Without a doubt, this is my area :)
         </DetailedAboutDescription>
         <ExperienceContainer>
           <div>
-            <PinkTitle>17+</PinkTitle>
+            <PinkTitle>1+</PinkTitle>
             <ExperienceDescription>Years of experience</ExperienceDescription>
           </div>
           <div>
-            <PinkTitle>325+</PinkTitle>
+            <PinkTitle>15+</PinkTitle>
             <ExperienceDescription>Completed projects</ExperienceDescription>
           </div>
         </ExperienceContainer>
         <SayHiButton>
           <a href="#">
-            Say hi <span>--&gt;</span>
+            SAY HI <span>--&gt;</span>
           </a>
         </SayHiButton>
       </AboutContainer>

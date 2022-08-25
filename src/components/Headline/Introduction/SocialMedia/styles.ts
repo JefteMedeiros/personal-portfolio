@@ -19,7 +19,7 @@ export const SocialMediaRow = styled.ul`
 
 export const SocialMediaSquareIcon = styled(Button)`
   display: flex;
-  padding: 0.625rem;
+  padding: 0.75rem;
   background: ${(props) => props.theme["white"]};
   border-radius: 3px;
   transition: all 0.2s;

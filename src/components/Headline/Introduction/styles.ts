@@ -40,9 +40,9 @@ export const Intro = styled(SectionTitle)`
   }
 `;
 
-
-
 export const Bio = styled(SectionDescription)`
+  margin-top: 0.625rem;
+
   &:after {
     content: "";
     position: absolute;

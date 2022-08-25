@@ -1,86 +1,37 @@
-import Image from "next/image";
-import { ArrowIcon } from "../../styles/Global/ArrowIcon";
-import { HoverButton, SectionTitleUnderline } from "../../styles/Global/styles";
-import {
-  Container,
-  SelectedWorkCard,
-  SelectedWorkTitle,
-  SelectedWorkContainer,
-  CardContainer,
-  WorkImage,
-} from "./styles";
+import axios from "axios";
+import { useEffect, useState } from "react";
+import { projects } from "../../data/projects";
+import { query } from "../../services";
+import { SectionTitleUnderline } from "../../styles/Global/styles";
+import { Container, SelectedWorkContainer } from "./styles";
+import { WorkCard } from "./WorkCard";
 
 export function MySelectedWork() {
+  const [repos, setRepos] = useState<any>();
+
+  useEffect(() => {
+    const retrievePinnedRepos = async () => {
+      const response = await axios.post(
+        "https://api.github.com/graphql",
+        { query: query },
+        {
+          headers: {
+            Authorization: "bearer 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",
+          },
+        }
+      );
+      const data = await response;
+      setRepos(data);
+    };
+  });
+
   return (
     <Container>
       <SectionTitleUnderline>My Selected Work</SectionTitleUnderline>
       <SelectedWorkContainer>
-      <CardContainer>
-          <WorkImage>
-            <Image layout="fill" src="/Me.jpg" />
-          </WorkImage>
-          <SelectedWorkCard>
-            <SelectedWorkTitle>Huma Marketing Agency</SelectedWorkTitle>
-            <HoverButton>
-              <ArrowIcon />
-            </HoverButton>
-          </SelectedWorkCard>
-        </CardContainer>
-        <CardContainer>
-          <WorkImage>
-            <Image layout="fill" src="/Me.jpg" />
-          </WorkImage>
-          <SelectedWorkCard>
-            <SelectedWorkTitle>Huma Marketing Agency</SelectedWorkTitle>
-            <HoverButton>
-              <ArrowIcon />
-            </HoverButton>
-          </SelectedWorkCard>
-        </CardContainer>
-        <CardContainer>
-          <WorkImage>
-            <Image layout="fill" src="/Me.jpg" />
-          </WorkImage>
-          <SelectedWorkCard>
-            <SelectedWorkTitle>Huma Marketing Agency</SelectedWorkTitle>
-            <HoverButton>
-              <ArrowIcon />
-            </HoverButton>
-          </SelectedWorkCard>
-        </CardContainer>
-        <CardContainer>
-          <WorkImage>
-            <Image layout="fill" src="/Me.jpg" />
-          </WorkImage>
-          <SelectedWorkCard>
-            <SelectedWorkTitle>Huma Marketing Agency</SelectedWorkTitle>
-            <HoverButton>
-              <ArrowIcon />
-            </HoverButton>
-          </SelectedWorkCard>
-        </CardContainer>
-        <CardContainer>
-          <WorkImage>
-            <Image layout="fill" src="/Me.jpg" />
-          </WorkImage>
-          <SelectedWorkCard>
-            <SelectedWorkTitle>Huma Marketing Agency</SelectedWorkTitle>
-            <HoverButton>
-              <ArrowIcon />
-            </HoverButton>
-          </SelectedWorkCard>
-        </CardContainer>
-        <CardContainer>
-          <WorkImage>
-            <Image layout="fill" src="/Me.jpg" />
-          </WorkImage>
-          <SelectedWorkCard>
-            <SelectedWorkTitle>Huma Marketing Agency</SelectedWorkTitle>
-            <HoverButton>
-              <ArrowIcon />
-            </HoverButton>
-          </SelectedWorkCard>
-        </CardContainer>
+        {projects.map((project, key) => {
+          return <WorkCard key={key} name={project.name} image={project.logo} />;
+        })}
       </SelectedWorkContainer>
     </Container>
   );

@@ -3,8 +3,8 @@ import styled from "styled-components";
 export const ImageContainer = styled.div`
   position: absolute;
   z-index: -1;
-  right: 11.25rem;
-  top: calc(100vh - (100vh - 6rem));
+  right: 10.4375rem;
+  top: calc(100vh - (100vh - 6.5rem));
   width: 54.375rem;
   height: calc(100vh - 6rem);
 

@@ -1,12 +1,13 @@
 import styled from "styled-components";
+import { SectionTitleUnderline } from "../../styles/Global/styles";
 
-export const Container = styled.div`
+export const Container = styled.section`
   margin-top: 4.25rem;
   margin-bottom: 5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 3.25rem;
+  gap: 4.125rem;
 `;
 
 export const CardsContainer = styled.section`
@@ -15,4 +16,8 @@ export const CardsContainer = styled.section`
   max-width: 82.5rem;
 
   gap: 1.5rem;
+`;
+
+export const MyServiceTitle = styled(SectionTitleUnderline)`
+
 `;

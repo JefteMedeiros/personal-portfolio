@@ -1,5 +1,5 @@
-import { Button, PinkTitle } from "../../styles/Global/styles";
-import { Container, HireMeContainer, HireMeTitle, Together } from "./styles";
+import { Button } from "../../styles/Global/styles";
+import { Container, HireMeButton, HireMeTitle, Together } from "./styles";
 
 export function HireMe() {
   return (
@@ -8,7 +8,7 @@ export function HireMe() {
         Got someting in mind? Let's make <br /> something awesome{" "}
         <Together>together.</Together>
       </HireMeTitle>
-      <Button>HIRE ME</Button>
+      <HireMeButton>HIRE ME</HireMeButton>
     </Container>
   );
 }

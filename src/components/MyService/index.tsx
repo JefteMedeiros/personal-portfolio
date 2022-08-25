@@ -1,25 +1,23 @@
-import { SectionTitleUnderline } from "../../styles/Global/styles";
-
-import { UIUIXDesign } from "./UIUXDesign";
-import { ProductDesign } from "./ProductDesign";
-import { BrandingDesign } from "./BrandingDesign";
-import { FrontEndDevelopment } from "./FrontEndDevelopment";
+import { ServiceCard } from "./ServiceCard";
 
 import {
   CardsContainer,
   Container,
+  MyServiceTitle,
 } from "./styles";
+import { myService } from "../../data/myService";
 
 
 export function MyService() {
   return (
     <Container>
-      <SectionTitleUnderline>My Sevice</SectionTitleUnderline>
+      <MyServiceTitle>My Service</MyServiceTitle>
       <CardsContainer>
-        <UIUIXDesign />
-        <ProductDesign />
-        <BrandingDesign />
-        <FrontEndDevelopment />
+        {myService.map((service, key) => {
+          return (
+            <ServiceCard key={key} icon={service.icon} name={service.name} />
+          )
+        })}
       </CardsContainer>
     </Container>
   );

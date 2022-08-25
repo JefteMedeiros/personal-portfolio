@@ -29,41 +29,6 @@ export const UserContainer = styled.div`
   gap: 0.25rem;
 `;
 
-export const UserBox = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  background-color: ${(props) => props.theme["white"]};
-  border-radius: 0.25rem;
-  padding: 1.5rem;
-`;
-
-export const UserPic = styled.div`
-  border-radius: 624.9375rem;
-  width: 3.25rem;
-  background-color: ${(props) => props.theme["gray-500"]};
-  height: 3.25rem;
-`;
-
-export const UserInfo = styled.div``;
-
-export const UserName = styled.h1`
-  font-size: 1.125rem;
-  font-weight: 400;
-  line-height: 1.75rem;
-  color: ${(props) => props.theme["black"]};
-`;
-
-export const UserRole = styled.p`
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-  color: ${(props) => props.theme["gray-500"]};
-`;
-
-export const UserCompany = styled.span`
-  color: ${(props) => props.theme["pink"]};
-`;
-
 export const UserRating = styled.span`
   display: flex;
   align-items: center;

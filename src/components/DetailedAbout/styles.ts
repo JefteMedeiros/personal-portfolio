@@ -4,7 +4,8 @@ import { Button, SectionDescription, SectionTitle } from "../../styles/Global/st
 export const Container = styled.section`
   display: flex;
   justify-content: center;
-  padding: 6.25rem 0;
+  padding-top: 10.8125rem;
+  padding-bottom: 7.5625rem;
   gap: 3.5rem;
 `;
 
@@ -45,6 +46,7 @@ export const DetailedAboutTitle = styled(SectionTitle)`
 `;
 
 export const DetailedAboutDescription = styled(SectionDescription)`
+  margin-top: 1.25rem;
   color: ${(props) => props.theme["gray-500"]};
   font-size: 1.125rem;
   line-height: 1.75rem;
@@ -71,8 +73,8 @@ export const ExperienceDescription = styled.span`
 
 export const SayHiButton = styled(Button)`
   margin-top: 2rem;
+  background-color: ${props => props.theme["purple"]};
   align-self: flex-start;
-  transition: all 200ms;
 
   span {
     visibility: hidden;
@@ -80,10 +82,7 @@ export const SayHiButton = styled(Button)`
     padding-right: -26px;
   }
 
-  &:hover {
-    span {
-      display: inline-block;
-      visibility: visible;
-    }
+  a {
+    color: ${props => props.theme["white"]};
   }
 `;

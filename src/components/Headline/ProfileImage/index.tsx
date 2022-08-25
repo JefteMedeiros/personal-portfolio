@@ -4,7 +4,7 @@ import { ImageContainer } from "./styles";
 export function ProfileImage() {
   return (
     <ImageContainer>
-      <Image src="/Me.jpg" layout="fill" />
+      <Image src="/images/backgrounds/Me.jpg" layout="fill" />
     </ImageContainer>
   );
 }

@@ -8,9 +8,13 @@ export const Container = styled.section`
   display: flex;
   justify-content: center;
   padding: 6.25rem 0;
-  margin-top: 4.25rem;
-  margin-bottom: 5rem;
   gap: 4.5rem;
+`;
+
+export const CompaniesContainer = styled.div`
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(5, 10.5rem);
 `;
 
 export const CompaniesTitle = styled(SectionTitle)`
@@ -30,23 +34,3 @@ export const CompaniesNumber = styled(PurpleUnderlinedTitle)`
     max-width: 5.5rem;
   }
 `;
-
-export const CompanyContainer = styled.div`
-  display: grid;
-  gap: 1.5rem;
-  grid-template-columns: repeat(5, 10.5rem);
-`;
-
-export const CompanyCard = styled.div`
-  display: flex;
-  border-radius: 0.5rem;
-  justify-content: center;
-  align-items: center;
-
-  background-color:  ${props => props.theme["white"]};
-
-  svg {
-    color: ${props => props.theme["black"]};
-  }
-`;
-

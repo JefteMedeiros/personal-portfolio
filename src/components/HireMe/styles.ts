@@ -1,12 +1,12 @@
 import styled from "styled-components";
-import { PinkTitle, SectionTitle } from "../../styles/Global/styles";
+import { Button, PinkTitle, SectionTitle } from "../../styles/Global/styles";
 
-export const Container = styled.div`
+export const Container = styled.section`
   position: relative;
   margin: auto;
   max-width: 82.5rem;
 
-  background-image: url('Shapes.png');
+  background-image: url('images/backgrounds/Shapes.png');
   background-repeat: no-repeat;
 
   display: flex;
@@ -25,8 +25,6 @@ export const Container = styled.div`
   }
 `;
 
-export const HireMeContainer = styled.div``;
-
 export const HireMeTitle = styled(SectionTitle)`
   font-weight: 400;
   font-size: 2rem;
@@ -37,4 +35,9 @@ export const Together = styled(PinkTitle)`
   font-weight: 400;
   font-size: 2rem;
   line-height: 150%;
+`;
+
+export const HireMeButton = styled(Button)`
+  color: ${props => props.theme["white"]};
+  background: ${props => props.theme["purple"]};
 `;
