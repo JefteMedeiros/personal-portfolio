@@ -1,5 +1,5 @@
-import { Container } from "../styles";
-import { HeaderLink, HeaderNav } from "./styles";
+import { Container } from '../styles';
+import { HeaderLink, HeaderNav } from './styles';
 
 export function Header() {
   return (

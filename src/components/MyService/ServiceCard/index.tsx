@@ -1,26 +1,22 @@
-import Image from "next/image";
-import { ServiceCardProps } from "../../../@types/props";
-import { ArrowIcon } from "../../../styles/Global/ArrowIcon";
+import Image from 'next/image';
+import { ArrowRight } from 'phosphor-react';
+import { ServiceCardProps } from '../../../@types/props';
 
-import {
-  HoverButton,
-} from "../../../styles/Global/styles";
-import { Container, ServiceCardTitle } from "./styles";
+import { Container, DiscussNow, ServiceCardTitle } from './styles';
 
-import { ServiceCardIcon } from "./styles";
+import { ServiceCardIcon } from './styles';
 
 export function ServiceCard(props: ServiceCardProps) {
   return (
     <Container>
       <ServiceCardIcon>
-        <Image src={props.icon} layout="fixed" width={40} height={40} />
+        <Image priority src={props.icon} layout="fixed" width={40} height={40} />
       </ServiceCardIcon>
-      <ServiceCardTitle>
-        {props.name}
-      </ServiceCardTitle>
-      <HoverButton>
-        <ArrowIcon />
-      </HoverButton>
+      <ServiceCardTitle>{props.name}</ServiceCardTitle>
+      <DiscussNow>
+        <span>DISCUSS NOW</span>
+        <ArrowRight width={36} />
+      </DiscussNow>
     </Container>
   );
 }

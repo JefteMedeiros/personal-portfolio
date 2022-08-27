@@ -1,4 +1,5 @@
 import styled, { createGlobalStyle } from "styled-components";
+import { visibilityOptions, VisibilityProps } from "../../@types/testimonial";
 
 export const GlobalStyles = createGlobalStyle`
   * {
@@ -28,38 +29,119 @@ export const GlobalStyles = createGlobalStyle`
     background-color: ${(props) => props.theme["black"]};
     color: ${(props) => props.theme["white"]};
   }
+
+  p {
+    @media screen and (max-width: 1600px) {
+      font-size: 0.75rem;
+    }
+  }
 `;
 
 export const Button = styled.button`
-  line-height: 3.25rem;
-  padding: 0 1.875rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   font-size: 1rem;
-  border: 2px solid transparent;
-  border-radius: 5px;
+  line-height: 3.5rem;
+  letter-spacing: 2%;
+  padding: 0 2rem;
+  border-radius: 4px;
+
+  position: relative;
+  transition: all 200ms;
   outline: none;
-  transition: all 0.2s;
+  text-align: center;
+
+  border: 1px solid transparent;
+
+  color: ${(props) => props.theme["white"]};
+  background-color: ${(props) => props.theme["white"]};
 
   a {
-    outline: none;
     color: ${(props) => props.theme["black"]};
   }
 
   &:hover {
     cursor: pointer;
-    background-color: ${(props) => props.theme["purple"]};
     color: ${(props) => props.theme["white"]};
-
-    svg {
-      color: ${(props) => props.theme["white"]};
-    }
+    background-color: ${(props) => props.theme["purple"]};
 
     a {
       color: ${(props) => props.theme["white"]};
     }
   }
 
+  span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transition: all 300ms ease-out;
+    will-change: transform;
+  }
+
+  &:hover span {
+    transform: translate3d(1rem, 0, 0);
+  }
+
+  svg {
+    opacity: 0;
+    position: absolute;
+    right: 0.5rem;
+    transition: all 200ms ease-out;
+    will-change: right, opacity;
+
+    * {
+      strokeWidth: 3;
+      -webkit-text-stroke-color: transparent;
+    }
+  }
+
+  &:hover svg {
+    opacity: 1;
+    right: -1.8rem;
+  }
+
   &:focus {
-    border: 2px solid ${(props) => props.theme["pink"]};
+    border: 1px solid ${props => props.theme["pink"]};
+  }
+`;
+
+export const HoverButton = styled.button`
+  display: flex;
+  align-items: center;
+  outline: none;
+  border: none;
+  transition: all 0.2s;
+  background-color: transparent;
+
+  svg {
+    position: relative;
+    right: 79%;
+    transition: all 0.2s;
+  }
+
+  span {
+    position: relative;
+    left: -0.625rem;
+    transition: all 0.2s;
+    opacity: 0;
+  }
+
+  &:hover {
+    color: ${(props) => props.theme["pink"]};
+    cursor: pointer;
+
+    svg {
+      right: 0;
+      color: ${(props) => props.theme["pink"]};
+    }
+
+    span {
+      left: 0;
+      opacity: 1;
+    }
   }
 `;
 
@@ -117,7 +199,7 @@ export const CardTitle = styled(SectionTitle)`
   font-size: 2rem;
   color: ${(props) => props.theme["black"]};
   line-height: 2.5rem;
-  margin-bottom: 2.5rem;
+  margin-bottom: 40px;
 
   &::after {
     position: absolute;
@@ -129,21 +211,6 @@ export const CardTitle = styled(SectionTitle)`
     border-radius: 9999px;
     width: 4rem;
     height: 0.1875rem;
-  }
-`;
-
-export const HoverButton = styled(Button)`
-  display: flex;
-  padding: 0;
-  line-height: normal;
-  background: transparent;
-
-  &:hover {
-    background: transparent;
-  }
-
-  svg {
-    color: ${(props) => props.theme["pink"]};
   }
 `;
 
@@ -181,5 +248,41 @@ export const PurpleUnderlinedTitle = styled.span`
 
   @media screen and (max-width: 420px) {
     font-size: 1.875rem;
+  }
+`;
+
+export const TestimonialContainer = styled.div<VisibilityProps>`
+  position: absolute;
+  right: 0;
+
+  max-width: 60.25rem;
+  width: 100%;
+  height: 25.75rem;
+  padding: 3.125rem;
+
+  background-color: ${(props) => props.theme["white"]};
+  border-radius: 0.1875rem;
+
+  transition: all 200ms;
+  
+  ${(props) => {
+    return `opacity: ${visibilityOptions[props.visibility]}`;
+  }};
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 14.25rem;
+    left: -1.25rem;
+    z-index: 9999;
+
+    border-top: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+    border-right: 30px solid ${(props) => props.theme["white"]};
+  }
+
+  @media screen and (max-width: 1600px) {
+    max-width: 60.25rem;
+    overflow-y: scroll;
   }
 `;

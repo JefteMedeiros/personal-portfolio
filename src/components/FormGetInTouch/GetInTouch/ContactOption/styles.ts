@@ -6,17 +6,22 @@ export const Container = styled.div`
   justify-content: center;
   align-items: center;
   gap: 1.25rem;
+
+  @media screen and (max-width: 480px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 `;
 
 export const ContactIcon = styled.div`
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
 
   width: 5rem;
-  padding: 1.375rem;
   height: 5rem;
+  padding: 1.375rem;
 
   border-radius: 9999px;
 
@@ -38,12 +43,23 @@ export const ContactIcon = styled.div`
   img {
     object-fit: contain;
   }
+
+  @media screen and (max-width: 1600px) {
+    width: 4rem;
+    height: 4rem;
+  }
 `;
 
 export const ContactInfo = styled(SectionDescription)`
   color: ${(props) => props.theme["black"]};
-  max-width: 21.25rem;
-  margin-top: 0;
   font-size: 1.125rem;
   line-height: 1.75rem;
+  
+  max-width: 21.25rem;
+  margin-top: 0;
+
+  @media screen and (max-width: 600px) {
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+  }
 `;

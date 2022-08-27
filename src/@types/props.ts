@@ -3,6 +3,7 @@ export interface UserProps {
   role: string;
   company: string;
   pic: string
+  clickedUser: number
 }
 
 export interface WorkCardProps {
@@ -20,3 +21,9 @@ export interface ContactProps {
   info: string;
 }
 
+export interface FormDataProps {
+  fullName: string;
+  email: string;
+  subjects: string;
+  message: string;
+}

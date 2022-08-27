@@ -1,0 +1,58 @@
+.accordion {
+  display: flex;
+  flex-direction: column;
+  max-width: 85rem;
+  width: 100%;
+}
+
+.accordion__button {
+  background-color: #fff;
+  color: #242424;
+  cursor: pointer;
+  max-width: 85rem;
+  width: 100%;
+  padding: 1.125rem;
+  text-align: left;
+  border: none;
+  transition: all 200ms;
+  border: 1px solid #282828;
+}
+
+.accordion__button:before {
+  display: inline-block;
+  content: "";
+  height: 0.625rem;
+  width: 0.625rem;
+  margin-right: 0.75rem;
+  border-bottom: 2px solid currentColor;
+  border-right: 2px solid currentColor;
+  transition: all 200ms;
+  transform: rotate(-45deg);
+}
+
+.accordion__button[aria-expanded="true"]::before,
+.accordion__button[aria-selected="true"]::before {
+  transform: rotate(45deg);
+}
+
+[hidden] {
+  display: none;
+}
+
+.accordion__panel {
+  background-color: #282828;
+  padding: 1.25rem;
+  max-width: 85rem;
+  width: 100%;
+  animation: fadein 0.35s ease-in;
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

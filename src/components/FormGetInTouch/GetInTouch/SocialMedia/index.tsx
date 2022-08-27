@@ -1,12 +1,5 @@
-import {
-  DiscordLogo,
-  InstagramLogo,
-  RedditLogo,
-  TelegramLogo,
-  TwitterLogo,
-  YoutubeLogo,
-} from "phosphor-react";
-import { Container, SocialMediaCircle } from "./styles";
+import { DiscordLogo, InstagramLogo, RedditLogo, TelegramLogo, TwitterLogo, YoutubeLogo } from 'phosphor-react';
+import { Container, SocialMediaCircle } from './styles';
 
 export function SocialMedia() {
   return (

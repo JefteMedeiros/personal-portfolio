@@ -1,4 +1,5 @@
 export const defaultTheme = {
+  
   //Color palette
   "purple": "#7D00FF",
   "pink": "#ED1CA6",

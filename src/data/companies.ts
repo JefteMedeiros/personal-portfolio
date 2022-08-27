@@ -1,14 +1,14 @@
 export const companies = [
   {
-    logo: "/images/companies/Apple.png" 
+    logo: "/images/companies/Apple.webp" 
   },
   {
-    logo: "/images/companies/Google.png"
+    logo: "/images/companies/Google.webp"
   },
   {
-    logo: "/images/companies/Tesla.png"
+    logo: "/images/companies/Tesla.webp"
   },
   {
-    logo: "/images/companies/Microsoft.png"
+    logo: "/images/companies/Microsoft.webp"
   },
 ]

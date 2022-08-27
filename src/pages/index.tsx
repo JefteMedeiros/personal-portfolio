@@ -1,4 +1,4 @@
-import type { NextPage } from 'next'
+import type { NextPage } from 'next';
 import { Companies } from '../components/Companies';
 import { FormGetInTouch } from '../components/FormGetInTouch';
 import { DetailedAbout } from '../components/DetailedAbout';
@@ -8,10 +8,11 @@ import { MySelectedWork } from '../components/MySelectedWork';
 import { MyService } from '../components/MyService';
 import { Testimonials } from '../components/Testimonials';
 import { Footer } from '../components/Footer';
+import { ClickedUserProvider } from '../context';
 
 const Home: NextPage = () => {
   return (
-    <>
+    <ClickedUserProvider>
       <Headline />
       <DetailedAbout />
       <MyService />
@@ -21,8 +22,8 @@ const Home: NextPage = () => {
       <Testimonials />
       <FormGetInTouch />
       <Footer />
-    </>
+    </ClickedUserProvider>
   );
-}
+};
 
-export default Home
+export default Home;

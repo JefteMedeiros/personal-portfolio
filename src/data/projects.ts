@@ -16,7 +16,7 @@ export const projects = [
     logo: "https://picsum.photos/501/400"
   },
   {
-    name: "react-native-sqlite-todo-list",
+    name: "react-native-todo-list",
     logo: "https://picsum.photos/502/400"
   },
   {

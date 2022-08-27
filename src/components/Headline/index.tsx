@@ -1,7 +1,7 @@
-import { Introduction } from "./Introduction";
-import { Header } from "./Header";
-import { Container, PurpleRectangle } from "./styles";
-import { ProfileImage } from "./ProfileImage";
+import { Introduction } from './Introduction';
+import { Header } from './Header';
+import { Container, PurpleRectangle } from './styles';
+import { ProfileImage } from './ProfileImage';
 
 export function Headline() {
   return (

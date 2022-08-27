@@ -6,6 +6,7 @@ export const Container = styled.div`
   flex-direction: column;
   gap: 1.5rem;
   align-items: center;
+
   margin-top: 3.3125rem;
   margin-bottom: 10.75rem;
 `;
@@ -17,8 +18,9 @@ export const FooterImage = styled.div`
 `;
 
 export const FooterText = styled(SectionDescription)`
-  font-size: 0.875rem;
   margin-top: 0;
+  
+  font-size: 0.875rem;
   color: ${props => props.theme["gray-500"]};
   line-height: 1.25rem;
 `;

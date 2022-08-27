@@ -1,12 +1,27 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
+export const Container = styled.button`
   display: flex;
   align-items: center;
   gap: 1rem;
-  background-color: ${(props) => props.theme["white"]};
+
+  border: 1px solid transparent;
   border-radius: 0.25rem;
-  padding: 1.5rem;
+  background-color: ${(props) => props.theme["white"]};
+  
+  padding: 1.4375rem;
+  
+  outline: none;
+  transition: all 200ms;
+
+  &:hover {
+    cursor: pointer;
+    border: 1px solid ${props => props.theme["pink"]};
+  }
+
+  &:focus {
+    border: 1px solid ${props => props.theme["pink"]};
+  }
 `;
 
 export const UserPic = styled.div`
@@ -21,7 +36,11 @@ export const UserPic = styled.div`
 `;
 
 export const UserInfo = styled.div`
-  width: 12.25rem
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  
+  width: 100%;
 `;
 
 export const UserName = styled.h1`
