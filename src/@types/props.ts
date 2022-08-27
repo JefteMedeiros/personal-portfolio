@@ -1,3 +1,5 @@
+import { FormEventHandler } from "react";
+
 export interface UserProps {
   name: string;
   role: string;
@@ -26,4 +28,8 @@ export interface FormDataProps {
   email: string;
   subjects: string;
   message: string;
+}
+
+export interface ContactFormProps {
+  onSubmit: FormEventHandler<HTMLFormElement>;
 }

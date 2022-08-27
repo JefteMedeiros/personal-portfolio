@@ -1,10 +1,7 @@
 import { FormEventHandler } from 'react';
 import { useFormContext } from 'react-hook-form';
+import { ContactFormProps } from '../../../@types/props';
 import { Container, DoubleColumn, FormButton, FormContainer, FormInput, FormTextarea, FormTitle, GridContainer, SingleColumn } from './styles';
-
-interface ContactFormProps {
-  onSubmit: FormEventHandler<HTMLFormElement>;
-}
 
 export function Form(props: ContactFormProps) {
   const { register } = useFormContext();
