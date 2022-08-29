@@ -1,4 +1,4 @@
-import { Button } from '../../styles/Global/styles';
+import { ArrowIcon } from '../../styles/Global/ArrowIcon';
 import { Container, HireMeButton, HireMeTitle, Together } from './styles';
 
 export function HireMe() {
@@ -7,7 +7,12 @@ export function HireMe() {
       <HireMeTitle>
         Got someting in mind? Let's make <br /> something awesome <Together>together.</Together>
       </HireMeTitle>
-      <HireMeButton>HIRE ME</HireMeButton>
+      <HireMeButton>
+          SAY HI
+          <span>
+            <ArrowIcon />
+          </span>
+        </HireMeButton>
     </Container>
   );
 }

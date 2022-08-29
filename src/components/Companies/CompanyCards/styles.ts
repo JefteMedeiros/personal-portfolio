@@ -46,6 +46,12 @@ export const ButtonContainer = styled(Container)`
   svg {
     font-size: 2rem;
     color: ${props => props.theme["black"]};
+    transition: all 200ms;
+
+    &:hover {
+      color: ${props => props.theme["purple"]};
+      cursor: pointer;
+    }
   }
   
   @media screen and (max-width: 1180px) {

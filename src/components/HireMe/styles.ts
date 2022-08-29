@@ -86,6 +86,15 @@ export const Together = styled(PinkTitle)`
 `;
 
 export const HireMeButton = styled(Button)`
+  margin-top: 2rem;
+  background-color: ${(props) => props.theme["purple"]};
   color: ${(props) => props.theme["white"]};
-  background: ${(props) => props.theme["purple"]};
+
+  &:hover {
+    padding-right: 4rem;
+  }
+
+  svg {
+    color: ${(props) => props.theme["white"]};
+  }
 `;
